@@ -9,6 +9,7 @@ import ProductDetail from './pages/ProductDetail';
 import FAQ from './pages/FAQ';
 import Cart from './pages/Cart';
 import JoinUs from './pages/JoinUs';
+import AboutUs from './pages/AboutUs';
 import { AnimatePresence } from 'motion/react';
 
 // Scroll to top on route change
@@ -36,6 +37,7 @@ export default function App() {
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/carrito" element={<Cart />} />
                 <Route path="/sumate" element={<JoinUs />} />
+                <Route path="/sobre-nosotros" element={<AboutUs />} />
               </Routes>
             </AnimatePresence>
           </main>

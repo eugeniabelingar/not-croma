@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 const Catalog = () => {
   const [activeCategory, setActiveCategory] = useState('Todos');
-  const categories = ['Todos', 'Abstracto', 'Figurativo'];
+  const categories = ['Todos', 'Abstracto', 'Figurativo', 'Contemporáneo', 'Paisaje'];
 
   const filteredPaintings = activeCategory === 'Todos' 
     ? PAINTINGS 

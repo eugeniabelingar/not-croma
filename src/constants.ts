@@ -11,19 +11,55 @@ export const PAINTINGS: Painting[] = [
     medium: 'Acrílico sobre lienzo',
     year: '2024',
     category: 'Figurativo',
-    imageUrl: 'https://storage.googleapis.com/static.antigravity.dev/user-uploads/67e0499b-3814-4648-842c-f6735166299f/image.png'
+    imageUrl: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b219?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: '2',
     title: 'Oro Rosa',
     artist: 'Elena Rodríguez',
     price: 6500,
-    description: 'Una obra maestra de abstracción contemporánea que explora la tensión entre la sobriedad de los tonos tierra y la vitalidad del rosa y el carmín. Las capas de textura revelan una profundidad emocional única.',
+    description: 'Una obra maestro de abstracción contemporánea que explora la tensión entre la sobriedad de los tonos tierra y la vitalidad del rosa y el carmín. Las capas de textura revelan una profundidad emocional única.',
     dimensions: '140 x 100 cm',
     medium: 'Óleo y espátula sobre lienzo',
     year: '2024',
     category: 'Abstracto',
-    imageUrl: 'https://storage.googleapis.com/static.antigravity.dev/user-uploads/67e0499b-3814-4648-842c-f6735166299f/image_1.png'
+    imageUrl: 'https://images.unsplash.com/photo-1533158326339-7f3cf2404354?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '3',
+    title: 'Silencio Urbano',
+    artist: 'Marcos Paz',
+    price: 4800,
+    description: 'Captura la esencia de la ciudad en reposo. Una composición minimalista que juega con las sombras y la luz artificial.',
+    dimensions: '80 x 80 cm',
+    medium: 'Mixta sobre madera',
+    year: '2023',
+    category: 'Contemporáneo',
+    imageUrl: 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '4',
+    title: 'Fragmentos',
+    artist: 'Lucía Méndez',
+    price: 7200,
+    description: 'Explora la deconstrucción de la forma a través de pinceladas enérgicas y una paleta de colores primarios.',
+    dimensions: '120 x 150 cm',
+    medium: 'Óleo sobre lienzo',
+    year: '2024',
+    category: 'Abstracto',
+    imageUrl: 'https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    id: '5',
+    title: 'Horizonte Infinito',
+    artist: 'Julián Sosa',
+    price: 5900,
+    description: 'Un estudio sobre la línea del horizonte y la calma que precede a la tormenta.',
+    dimensions: '160 x 90 cm',
+    medium: 'Acrílico y texturizador',
+    year: '2024',
+    category: 'Paisaje',
+    imageUrl: 'https://images.unsplash.com/photo-1579783922514-0235116493fe?auto=format&fit=crop&q=80&w=800'
   }
 ];
 

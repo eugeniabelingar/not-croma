@@ -44,7 +44,7 @@ const FAQ = () => {
         <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-ink/50 mb-4 font-medium">
           Asistencia al Coleccionista
         </p>
-        <h1 className="text-5xl font-serif mb-6">Preguntas Frecuentes</h1>
+        <h1 className="text-5xl font-serif mb-6">FAQ</h1>
         <p className="text-sm font-light text-luxury-ink/60">
           Todo lo que necesita saber sobre el proceso de adquisición y logística.
         </p>

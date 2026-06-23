@@ -14,18 +14,25 @@ const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false,
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      whileHover={hoverScale ? { scale: 1.15 } : {}}
+      whileHover={hoverScale ? { scale: 1.03 } : {}}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, type: 'spring', stiffness: 300, damping: 20 }}
-      className="group cursor-pointer"
+      transition={{ 
+        duration: 0.6, 
+        type: 'spring', 
+        stiffness: 300, 
+        damping: 20,
+        // Disable animations if user prefers reduced motion
+        ...(typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? { type: 'tween', duration: 0 } : {})
+      }}
+      className="group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-luxury-ink focus-visible:ring-offset-[3px]"
     >
       <Link to={`/producto/${painting.id}`}>
-        <div className="aspect-[3/4] overflow-hidden bg-gray-50 relative flex items-center justify-center">
+        <div className="aspect-[3/4] overflow-hidden rounded-2xl bg-gray-50 relative">
           <img
             src={painting.imageUrl}
             alt={painting.title}
-            className={`max-w-full max-h-full object-contain transition-transform duration-700 ${
-              !hoverScale ? 'group-hover:scale-105' : ''
+            className={`w-full h-full object-cover transition-transform duration-700 ${
+              !hoverScale ? 'group-hover:scale-[1.03]' : ''
             }`}
             referrerPolicy="no-referrer"
           />
@@ -35,7 +42,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false,
           <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-ink/50 font-medium">
             {painting.artist}
           </p>
-          <h3 className="text-lg font-serif italic tracking-wide">{painting.title}</h3>
+          <h3 className="text-lg font-highlight tracking-wide">{painting.title}</h3>
           {showPrice && (
             <p className="text-sm font-light text-luxury-ink/80">
               {new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(painting.price)}
