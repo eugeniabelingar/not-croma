@@ -92,9 +92,16 @@ const ProductDetail = () => {
           animate={{ opacity: 1, x: 0 }}
           className="flex flex-col justify-center"
         >
-          <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-ink/50 mb-4 font-medium">
-            {painting.artist}
-          </p>
+          <div className="flex items-center gap-3 mb-4 flex-wrap">
+            <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-ink/50 font-medium">
+              {painting.artist}
+            </p>
+            {painting.isSigned && (
+              <span className="text-[9px] uppercase tracking-widest font-semibold px-2.5 py-0.5 bg-luxury-ink text-luxury-bg rounded-full">
+                Obra firmada
+              </span>
+            )}
+          </div>
           <h1 className="text-4xl md:text-5xl font-serif mb-8 font-normal">{painting.title}</h1>
 
           <div className="space-y-8 mb-10">

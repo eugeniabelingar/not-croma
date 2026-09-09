@@ -38,9 +38,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false 
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300" />
         </div>
         <div className="mt-6 space-y-1">
-          <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-ink/50 font-medium">
-            {painting.artist}
-          </p>
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-ink/50 font-medium">
+              {painting.artist}
+            </p>
+            {painting.isSigned && (
+              <span className="text-[8px] uppercase tracking-[0.15em] font-semibold text-luxury-ink px-2 py-0.5 bg-luxury-ink/5 rounded-full border border-luxury-ink/10">
+                Obra firmada
+              </span>
+            )}
+          </div>
           <h3 className="text-lg font-highlight tracking-wide">{painting.title}</h3>
         </div>
       </Link>

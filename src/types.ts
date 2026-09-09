@@ -8,9 +8,17 @@ export interface Painting {
   medium: string;
   year: string;
   category: string;
+  isSigned?: boolean;
   authenticity?: string;
   imageUrl: string;
   images?: string[];
+}
+
+export interface Artist {
+  id: string;
+  name: string;
+  avatarUrl: string;
+  bio?: string;
 }
 
 export interface CartItem extends Painting {

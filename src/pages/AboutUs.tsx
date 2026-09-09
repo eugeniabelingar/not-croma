@@ -48,7 +48,7 @@ const AboutUs = () => {
               Filosofía de Estudio
             </p>
             <h1 className="text-[10vw] lg:text-[5.5vw] font-black leading-[0.95] mb-12 tracking-tighter uppercase relative z-10 lg:ml-auto lg:w-fit">
-              Allier <span className="font-light">Art Studio</span>
+              Allier <span className="font-light block">Art Studio</span>
             </h1>
             <div className="max-w-md">
               <p className="text-sm font-light leading-relaxed text-luxury-ink/60 mb-8">
@@ -119,7 +119,7 @@ const AboutUs = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl font-light leading-relaxed text-luxury-ink/80 animate-fade-in"
             >
-              Nacimos para romper esa barrera. Somos el puente que conecta el talento de artistas contemporáneos con personas, estudios de interiorismo y desarrollos inmobiliarios. Hacemos simple lo complejo, uniendo arte y diseño para transformar espacios comunes en lugares con identidad propia.
+              Nacimos para romper esa barrera. Somos el puente que conecta el talento de artistas contemporáneos con personas, estudios y desarrollos inmobiliarios. Hacemos simple lo complejo, uniendo arte y diseño para transformar espacios comunes en lugares con identidad propia.
             </motion.p>
           </div>
 

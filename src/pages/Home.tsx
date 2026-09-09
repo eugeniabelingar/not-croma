@@ -129,7 +129,7 @@ const Home = () => {
       <section className="bg-white py-28 md:py-36 border-y border-luxury-ink/5">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-light text-luxury-ink leading-[1.35] tracking-tight max-w-3xl mx-auto">
-            Somos el puente que conecta el talento de <span className="font-medium text-luxury-ink">artistas contemporáneos</span> con personas, estudios de interiorismo y desarrollos inmobiliarios.
+            Somos el puente que conecta el talento de <span className="font-medium text-luxury-ink">artistas contemporáneos</span> con personas, estudios y desarrollos inmobiliarios.
           </p>
           <div className="mt-12 flex items-center justify-center gap-4">
             <div className="w-8 h-px bg-luxury-ink/20" />

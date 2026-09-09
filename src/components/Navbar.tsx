@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag } from 'lucide-react';
-import { useCart } from '../context/CartContext';
 import StaggeredMenu from './StaggeredMenu';
 
 const Navbar = () => {
-  const { itemCount } = useCart();
   const { pathname } = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,20 +31,9 @@ const Navbar = () => {
   ];
 
   const Logo = (
-    <Link to="/" className={`text-xl md:text-2xl font-black tracking-tight uppercase transition-colors duration-300 ${useWhiteText ? 'text-white' : 'text-luxury-ink'} inline-flex items-baseline gap-2`}>
+    <Link to="/" className={`text-xl md:text-2xl font-black tracking-tight uppercase transition-colors duration-300 ${useWhiteText ? 'text-white' : 'text-luxury-ink'} flex flex-col items-start leading-none`}>
       <span>Allier</span>
-      <span className="font-light tracking-[0.25em] text-[10px] md:text-xs opacity-75">Art Studio</span>
-    </Link>
-  );
-
-  const CartIcon = (
-    <Link to="/carrito" className={`relative group transition-colors duration-300 ${useWhiteText ? 'text-white' : 'text-luxury-ink'}`}>
-      <ShoppingBag size={20} strokeWidth={1.5} />
-      {itemCount > 0 && (
-        <span className={`absolute -top-2 -right-2 text-luxury-bg text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold transition-colors duration-300 ${useWhiteText ? 'bg-white text-luxury-ink' : 'bg-luxury-ink text-luxury-bg'}`}>
-          {itemCount}
-        </span>
-      )}
+      <span className="font-light tracking-[0.25em] text-[9px] md:text-[10px] opacity-75 mt-1">Art Studio</span>
     </Link>
   );
 
@@ -56,7 +42,6 @@ const Navbar = () => {
       items={navLinks}
       socialItems={socialItems}
       logoComponent={Logo}
-      extraHeaderContent={CartIcon}
       colors={['#E4E3E0', '#141414']}
       accentColor="#141414"
       menuButtonColor={useWhiteText ? '#FFFFFF' : '#141414'}

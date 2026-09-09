@@ -1,4 +1,6 @@
-import { Painting } from './types';
+import { Painting, Artist } from './types';
+import crisAlzualdeImg from './cris_alzualde_1.png';
+import crisAlzualdeObraImg from './cris_alzualde_obra_1.png';
 
 export const PAINTINGS: Painting[] = [
   {
@@ -11,7 +13,8 @@ export const PAINTINGS: Painting[] = [
     medium: 'Acrílico sobre tela',
     year: '2025',
     category: 'Florales',
-    authenticity: 'Incluye certificado',
+    isSigned: false,
+    authenticity: 'Certificado de autenticidad (obra no firmada)',
     imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1788866391/Costa_Azul_image_1.png',
     images: [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866391/Costa_Azul_image_1.png',
@@ -29,7 +32,8 @@ export const PAINTINGS: Painting[] = [
     medium: 'Acrílico sobre tela',
     year: '2025',
     category: 'Abstracto',
-    authenticity: 'Incluye certificado',
+    isSigned: false,
+    authenticity: 'Certificado de autenticidad (obra no firmada)',
     imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_1.png',
     images: [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_1.png',
@@ -47,24 +51,49 @@ export const PAINTINGS: Painting[] = [
     medium: 'Acrílico sobre tela',
     year: '2026',
     category: 'Abstracto',
-    authenticity: 'Incluye certificado',
+    isSigned: false,
+    authenticity: 'Certificado de autenticidad (obra no firmada)',
     imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Cauce_azul_image_1.png',
     images: [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Cauce_azul_image_1.png',
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866895/Cauce_azul_image_2.png',
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Cauce_azul_image_3.png'
     ]
+  },
+  {
+    id: '4',
+    title: 'Ella Amarillo',
+    artist: 'Cris Alzualde',
+    price: 6200,
+    description: 'Obra de autor de la artista contemporánea Cris Alzualde. Una pieza con carácter expresivo y cuidada textura, firmada de puño y letra por la artista en el frente y al dorso, entregada con certificado oficial de autenticidad.',
+    dimensions: '80 x 100 cm',
+    medium: 'Técnica mixta sobre lienzo',
+    year: '2026',
+    category: 'Artistas',
+    isSigned: true,
+    authenticity: 'Obra firmada por Cris Alzualde + Certificado de autenticidad',
+    imageUrl: crisAlzualdeObraImg,
+    images: [crisAlzualdeObraImg, crisAlzualdeImg]
+  }
+];
+
+export const ARTISTS: Artist[] = [
+  {
+    id: 'cris-alzualde',
+    name: 'Cris Alzualde',
+    avatarUrl: crisAlzualdeImg,
+    bio: 'Artista contemporánea convocada por Allier Art Studio. Sus obras se caracterizan por una expresiva paleta y texturas que dotan a cada pieza de un carácter único e inconfundible.'
   }
 ];
 
 export const FAQS = [
   {
-    question: '¿Cómo realizo una compra?',
-    answer: 'Es simple. Elegís la pieza que conecte con vos, la sumás al carrito y seguís los pasos de pago. Una vez confirmada, nos ponemos en contacto con vos para coordinar el envío. Si necesitás algo más personalizado, siempre podés escribirnos.'
+    question: '¿Cómo realizo la adquisición de una obra?',
+    answer: 'Es simple. Elegís la pieza que conecte con vos y hacés clic en "Consultar sobre esta obra" o nos escribís directamente por correo o WhatsApp. Nos pondremos en contacto personalizado para brindarte asesoramiento, cotización y coordinar la entrega.'
   },
   {
     question: '¿Realizan envíos?',
-    answer: 'Sí, llegamos a cualquier rincón de Argentina. Nos encargamos de que el embalaje sea el ideal para que la obra viaje segura y llegue impecable a tu puerta. El costo se calcula al momento del checkout, pero si estás en AMBA, consultanos por opciones de entrega rápida.'
+    answer: 'Sí, llegamos a cualquier rincón de Argentina. Nos encargamos de que el embalaje sea el ideal para que la obra viaje segura y llegue impecable a tu puerta. Coordinamos el envío y los tiempos de entrega directamente con vos.'
   },
   {
     question: '¿Cómo sé que mi obra es original?',
