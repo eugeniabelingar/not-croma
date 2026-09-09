@@ -6,10 +6,9 @@ import { motion } from 'motion/react';
 interface ProductCardProps {
   painting: Painting;
   hoverScale?: boolean;
-  showPrice?: boolean;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false, showPrice = true }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -43,11 +42,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false,
             {painting.artist}
           </p>
           <h3 className="text-lg font-highlight tracking-wide">{painting.title}</h3>
-          {showPrice && (
-            <p className="text-sm font-light text-luxury-ink/80">
-              {new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR' }).format(painting.price)}
-            </p>
-          )}
         </div>
       </Link>
     </motion.div>

@@ -45,19 +45,17 @@ const AboutUs = () => {
             transition={{ duration: 1, ease: "circOut" }}
           >
             <p className="text-[10px] uppercase tracking-[0.6em] text-luxury-ink/40 mb-8 font-medium">
-              Manifiesto de Marca
+              Filosofía de Estudio
             </p>
-            <h1 className="text-[12vw] lg:text-[8vw] font-black leading-none mb-12 tracking-tighter whitespace-nowrap relative z-10 lg:ml-auto lg:w-fit lg:-mr-[3vw]">
-              not CROMA
+            <h1 className="text-[10vw] lg:text-[5.5vw] font-black leading-[0.95] mb-12 tracking-tighter uppercase relative z-10 lg:ml-auto lg:w-fit">
+              Allier <span className="font-light">Art Studio</span>
             </h1>
             <div className="max-w-md">
               <p className="text-sm font-light leading-relaxed text-luxury-ink/60 mb-8">
-                En la intersección del arte y la tecnología, creamos un nuevo paradigma para la expresión creativa.
+                En la intersección del arte y la arquitectura contemporánea, creamos un nuevo paradigma para la expresión creativa.
               </p>
               <div className="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold">
-                <span>Est. 2026</span>
-                <div className="w-12 h-px bg-luxury-ink/20" />
-                <span>Buenos Aires</span>
+                <span>BUENOS AIRES 2026</span>
               </div>
             </div>
           </motion.div>
@@ -73,7 +71,7 @@ const AboutUs = () => {
           >
             <img
               src={nosotrosImage}
-              alt="Art Gallery"
+              alt="Art Studio"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
             />
@@ -84,7 +82,7 @@ const AboutUs = () => {
         {/* Vertical Rail Text */}
         <div className="absolute left-6 bottom-12 hidden lg:block">
           <p className="text-[10px] uppercase tracking-[0.5em] font-medium text-luxury-ink/30 [writing-mode:vertical-rl] rotate-180">
-            NOTCROMA — ARTE CONTEMPORÁNEO
+            ALLIER ART STUDIO — ARTE CONTEMPORÁNEO
           </p>
         </div>
       </section>
@@ -112,7 +110,7 @@ const AboutUs = () => {
               transition={{ duration: 0.8, delay: 0.1 }}
               className="text-lg md:text-xl font-light leading-relaxed text-luxury-ink/80 animate-fade-in"
             >
-              Existe la falsa idea de que el buen arte es lejano, imposible o solo para expertos. En <span className="font-bold">not CROMA</span> pensamos exactamente lo contrario: el arte se vive, se habita y tiene que ser parte de tu día a día.
+              Existe la falsa idea de que el buen arte es lejano, imposible o solo para expertos. En <span className="font-bold">Allier Art Studio</span> pensamos exactamente lo contrario: el arte se vive, se habita y tiene que ser parte de tu día a día.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -302,7 +300,7 @@ const AboutUs = () => {
                       <input
                         required
                         type="text"
-                        placeholder="Ej. Estudio Croma o María Gómez"
+                        placeholder="Ej. Estudio Allier o María Gómez"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full bg-transparent border-b border-luxury-ink/10 focus:border-luxury-ink py-2 text-sm focus:outline-none transition-colors duration-300 placeholder:text-luxury-ink/20"

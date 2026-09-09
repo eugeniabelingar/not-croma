@@ -8,7 +8,9 @@ export interface Painting {
   medium: string;
   year: string;
   category: string;
+  authenticity?: string;
   imageUrl: string;
+  images?: string[];
 }
 
 export interface CartItem extends Painting {

@@ -59,7 +59,7 @@ const Cart = () => {
                         <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-ink/50 mb-1">
                           {item.artist}
                         </p>
-                        <h3 className="text-xl font-serif italic">{item.title}</h3>
+                        <h3 className="text-xl font-serif font-normal">{item.title}</h3>
                       </div>
                       <button 
                         onClick={() => removeFromCart(item.id)}

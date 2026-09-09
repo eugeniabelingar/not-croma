@@ -14,12 +14,12 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>(() => {
-    const saved = localStorage.getItem('notcroma_cart');
+    const saved = localStorage.getItem('allier_cart') || localStorage.getItem('notcroma_cart');
     return saved ? JSON.parse(saved) : [];
   });
 
   useEffect(() => {
-    localStorage.setItem('notcroma_cart', JSON.stringify(cart));
+    localStorage.setItem('allier_cart', JSON.stringify(cart));
   }, [cart]);
 
   const addToCart = (painting: Painting) => {

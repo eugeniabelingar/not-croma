@@ -19,17 +19,14 @@ const JoinUs = () => {
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-16"
       >
-        <h1 className="text-5xl font-serif mb-12 italic tracking-wide">Súmate a <span className="lowercase">not</span></h1>
+        <h1 className="text-5xl font-serif mb-12 tracking-wide font-normal">Hablemos</h1>
         
         <div className="space-y-6 text-sm font-light leading-relaxed text-luxury-ink/80 text-left max-w-2xl mx-auto">
           <p>
-            ¿Sos artista y buscás un lugar donde exponer tus obras? En <span className="lowercase">not</span> estamos en constante movimiento, siempre en la búsqueda de nuevas miradas para nuestra comunidad.
-          </p>
-          <p>
-            Si tenés dudas sobre cómo trabajamos, querés entender el proceso o simplemente te imaginás una de nuestras obras transformando tus paredes pero no sabés cuál elegir, hablemos. Estamos para curar tu espacio con vos.
+            Allier es un espacio en constante movimiento y nos encanta tejer redes. Ya sea que seas un artista buscando dónde exponer, un profesional o marca con ganas de armar proyectos en conjunto, o si simplemente necesitás que te asesoremos para encontrar el cuadro ideal para tu casa... estás en el lugar correcto.
           </p>
           <p className="font-medium text-luxury-ink">
-            Dejanos un mensaje y lo resolvemos juntos.
+            Elegí tu opción en el formulario acá abajo, dejanos tu mensaje y nos ponemos en contacto con vos.
           </p>
         </div>
       </motion.div>
@@ -45,7 +42,7 @@ const JoinUs = () => {
             <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <Check size={32} />
             </div>
-            <h2 className="text-2xl font-serif italic">¡Mensaje enviado!</h2>
+            <h2 className="text-2xl font-serif font-normal">¡Mensaje enviado!</h2>
             <p className="text-sm font-light text-luxury-ink/60">Nos pondremos en contacto con vos a la brevedad.</p>
           </div>
         ) : (
@@ -88,6 +85,7 @@ const JoinUs = () => {
               >
                 <option value="" disabled>Seleccioná una opción</option>
                 <option value="artista">Soy artista y quiero sumarme.</option>
+                <option value="proyecto">Tengo un proyecto y quiero sumar sus obras.</option>
                 <option value="asesoramiento">Busco asesoramiento para mis paredes/espacio.</option>
                 <option value="dudas">Tengo dudas sobre el funcionamiento.</option>
                 <option value="otro">Otro.</option>

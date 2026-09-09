@@ -1,0 +1,6 @@
+{
+  "name": "Allier Art Studio",
+  "description": "Estudio de arte contemporáneo que conecta el talento de artistas con personas, estudios de interiorismo y desarrollos inmobiliarios.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

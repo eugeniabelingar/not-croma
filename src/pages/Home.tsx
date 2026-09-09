@@ -82,12 +82,62 @@ const Home = () => {
         <FeaturedCarousel paintings={PAINTINGS} />
       </section>
 
-      {/* Philosophy Section */}
-      <section className="bg-white py-32 border-y border-luxury-ink/5">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl mb-12">TU ESPACIO. TU IDENTIDAD</h2>
-          <div className="w-12 h-px bg-luxury-ink/20 mx-auto mb-12" />
-          <p className="text-sm font-light tracking-wide uppercase text-luxury-ink/60"><span className="lowercase">not</span> croma — Est. 2024</p>
+      {/* Trust Bar / Beneficios */}
+      <section className="border-t border-b border-luxury-ink/10 bg-[#FAF9F7] py-14 md:py-20">
+        <div className="w-full px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-0 lg:divide-x divide-luxury-ink/10">
+            <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
+                OBRAS ORIGINALES
+              </h3>
+              <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
+                Piezas únicas listas para colgar.
+              </p>
+            </div>
+
+            <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
+                ARTE A MEDIDA
+              </h3>
+              <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
+                ¿Tenés una idea? Te ayudamos a encontrar al artista ideal.
+              </p>
+            </div>
+
+            <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
+                ASESORÍA GRATUITA
+              </h3>
+              <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
+                Te guiamos paso a paso para encontrar el cuadro perfecto para tu espacio.
+              </p>
+            </div>
+
+            <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
+              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
+                PROYECTOS
+              </h3>
+              <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
+                Trabajamos en conjunto con estudios de arquitectura y otros profesionales.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Statement Section */}
+      <section className="bg-white py-28 md:py-36 border-y border-luxury-ink/5">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] font-light text-luxury-ink leading-[1.35] tracking-tight max-w-3xl mx-auto">
+            Somos el puente que conecta el talento de <span className="font-medium text-luxury-ink">artistas contemporáneos</span> con personas, estudios de interiorismo y desarrollos inmobiliarios.
+          </p>
+          <div className="mt-12 flex items-center justify-center gap-4">
+            <div className="w-8 h-px bg-luxury-ink/20" />
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-medium text-luxury-ink/50">
+              Allier Art Studio — BUENOS AIRES 2026
+            </span>
+            <div className="w-8 h-px bg-luxury-ink/20" />
+          </div>
         </div>
       </section>
     </div>

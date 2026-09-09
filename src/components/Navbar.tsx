@@ -24,7 +24,7 @@ const Navbar = () => {
     { label: 'Inicio', link: '/' },
     { label: 'Colección', link: '/coleccion' },
     { label: 'Nosotros', link: '/sobre-nosotros' },
-    { label: 'Súmate a not', link: '/sumate' },
+    { label: 'CONTACTANOS', link: '/sumate' },
     { label: 'FAQ', link: '/faq' },
   ];
 
@@ -34,8 +34,9 @@ const Navbar = () => {
   ];
 
   const Logo = (
-    <Link to="/" className={`text-2xl font-black tracking-tighter uppercase transition-colors duration-300 ${useWhiteText ? 'text-white' : 'text-luxury-ink'}`}>
-      <span className="lowercase">not</span> croma
+    <Link to="/" className={`text-xl md:text-2xl font-black tracking-tight uppercase transition-colors duration-300 ${useWhiteText ? 'text-white' : 'text-luxury-ink'} inline-flex items-baseline gap-2`}>
+      <span>Allier</span>
+      <span className="font-light tracking-[0.25em] text-[10px] md:text-xs opacity-75">Art Studio</span>
     </Link>
   );
 

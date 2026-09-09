@@ -17,7 +17,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex justify-between items-center text-left group"
       >
-        <h3 className="text-xl font-serif tracking-wide group-hover:italic transition-all">
+        <h3 className="text-xl font-serif tracking-wide group-hover:text-luxury-accent transition-colors">
           {question}
         </h3>
         <span className="text-luxury-ink/40">
@@ -41,13 +41,7 @@ const FAQ = () => {
   return (
     <div className="pt-32 pb-32 px-6 max-w-4xl mx-auto">
       <header className="mb-20 text-center">
-        <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-ink/50 mb-4 font-medium">
-          Asistencia al Coleccionista
-        </p>
-        <h1 className="text-5xl font-serif mb-6">FAQ</h1>
-        <p className="text-sm font-light text-luxury-ink/60">
-          Todo lo que necesita saber sobre el proceso de adquisición y logística.
-        </p>
+        <h1 className="text-4xl md:text-5xl font-serif tracking-wide font-normal">PREGUNTAS FRECUENTES</h1>
       </header>
 
       <div className="space-y-4">
@@ -57,12 +51,12 @@ const FAQ = () => {
       </div>
 
       <div className="mt-32 p-12 bg-white border border-luxury-ink/5 text-center">
-        <h4 className="text-lg font-serif mb-4 italic">¿Tenés alguna otra pregunta?</h4>
+        <h4 className="text-lg font-serif mb-4 font-normal">¿Tenés alguna otra pregunta?</h4>
         <p className="text-sm font-light text-luxury-ink/60 mb-8">
           Estamos acá para asesorarte en lo que necesites. Escribinos y proyectemos tu espacio juntos.
         </p>
         <a 
-          href="mailto:notcroma@gmail.com" 
+          href="mailto:allierartstudio@gmail.com" 
           className="text-[10px] uppercase tracking-widest font-bold border-b border-luxury-ink pb-1"
         >
           Contactar con un Curador

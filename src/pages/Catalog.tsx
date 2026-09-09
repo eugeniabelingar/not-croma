@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 
 const Catalog = () => {
   const [activeCategory, setActiveCategory] = useState('Todos');
-  const categories = ['Todos', 'Abstracto', 'Figurativo', 'Contemporáneo', 'Paisaje'];
+  const categories = ['Todos', ...Array.from(new Set(PAINTINGS.map(p => p.category)))];
 
   const filteredPaintings = activeCategory === 'Todos' 
     ? PAINTINGS 
@@ -42,7 +42,7 @@ const Catalog = () => {
 
       {filteredPaintings.length === 0 && (
         <div className="py-20 text-center">
-          <p className="font-light text-luxury-ink/50 italic">No se encontraron obras en esta categoría.</p>
+          <p className="font-light text-luxury-ink/50">No se encontraron obras en esta categoría.</p>
         </div>
       )}
     </div>
