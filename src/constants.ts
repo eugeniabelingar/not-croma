@@ -33,12 +33,31 @@ export const PAINTINGS: Painting[] = [
     year: '2025',
     category: 'Abstracto',
     isSigned: false,
-    authenticity: 'Certificado de autenticidad (obra no firmada)',
-    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_1.png',
+    authenticity: 'Incluye certificado de autenticidad',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1789075036/Oro_Rosa_image1.jpg',
     images: [
-      'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_1.png',
-      'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_2.png',
-      'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_3.png'
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1789075036/Oro_Rosa_image1.jpg',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_3.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Oro_Rosa_image_2.png'
+    ]
+  },
+  {
+    id: '5',
+    title: 'Florescencia tardía',
+    artist: 'Allier Art Studio',
+    price: 5200,
+    description: 'Una pieza que funciona como un respiro visual, aportando una calma sofisticada. El dinamismo de sus trazos expresivos y sus tintes borgoña sobre una base neutra y matérica crean el equilibrio justo para proyectos de arquitectura y diseño que buscan serenidad con carácter contemporáneo.',
+    dimensions: '1000 x 1000',
+    medium: 'Acrílico sobre tela',
+    year: '2026',
+    category: 'Abstracto',
+    isSigned: false,
+    authenticity: 'Incluye certificado de autenticidad (obra no firmada)',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1789074212/Florescencia_tardi%CC%81a_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1789074212/Florescencia_tardi%CC%81a_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1789074212/Florescencia_tardi%CC%81a_image_2.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1789074229/Florescencia_tardi%CC%81a_image_3.png'
     ]
   },
   {

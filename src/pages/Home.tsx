@@ -113,14 +113,19 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
-              <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
-                PROYECTOS
-              </h3>
+            <Link to="/proyectos" className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5 group">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink group-hover:text-luxury-ink/70 transition-colors">
+                  PROYECTOS
+                </h3>
+                <span className="text-[10px] uppercase tracking-wider text-luxury-ink/40 group-hover:text-luxury-ink transition-colors font-medium">
+                  Ver →
+                </span>
+              </div>
               <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
                 Trabajamos en conjunto con estudios de arquitectura y otros profesionales.
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

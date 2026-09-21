@@ -20,6 +20,7 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Inicio', link: '/' },
     { label: 'Colección', link: '/coleccion' },
+    { label: 'Proyectos', link: '/proyectos' },
     { label: 'Nosotros', link: '/sobre-nosotros' },
     { label: 'CONTACTANOS', link: '/sumate' },
     { label: 'FAQ', link: '/faq' },
