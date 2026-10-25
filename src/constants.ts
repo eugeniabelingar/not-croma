@@ -2,6 +2,9 @@ import { Painting, Artist } from './types';
 import crisAlzualdeImg from './cris_alzualde_1.png';
 import crisAlzualdeObraImg from './cris_alzualde_obra_1.png';
 
+// Control de visibilidad de la sección Proyectos (cambiar a true para volver a mostrarla en el sitio)
+export const SHOW_PROJECTS = false;
+
 export const PAINTINGS: Painting[] = [
   {
     id: '1',
@@ -15,6 +18,9 @@ export const PAINTINGS: Painting[] = [
     category: 'Florales',
     isSigned: false,
     authenticity: 'Certificado de autenticidad (obra no firmada)',
+    isSold: true,
+    customCtaText: 'CONSULTAR POR OBRAS SIMILARES',
+    privateCollectionNote: 'Colección privada: Obra adquirida de forma exclusiva para un proyecto de arquitectura e interiorismo en el barrio Costa Esmeralda (Buenos Aires, 2025).',
     imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1788866391/Costa_Azul_image_1.png',
     images: [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866391/Costa_Azul_image_1.png',
@@ -77,6 +83,45 @@ export const PAINTINGS: Painting[] = [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Cauce_azul_image_1.png',
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866895/Cauce_azul_image_2.png',
       'https://res.cloudinary.com/uswfskxs/image/upload/v1788866365/Cauce_azul_image_3.png'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Savia',
+    artist: 'Allier Art Studio',
+    price: 5200,
+    description: 'Una obra con vitalidad y movimiento. Sus aguadas fluidas en tonos borgoña, coral y ocre aportan una calidez sofisticada, siendo el acento contemporáneo perfecto para elevar proyectos de arquitectura y diseño de interiores con mucha personalidad.',
+    dimensions: '1000 x 1000',
+    medium: 'Acrílico sobre tela',
+    year: '2026',
+    category: 'Abstracto',
+    isSigned: false,
+    authenticity: 'Incluye certificado de autenticidad',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1792931894/Savia_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931894/Savia_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931887/Savia_image_2.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931893/Savia_image_3.png'
+    ]
+  },
+  {
+    id: '7',
+    title: 'Marea Cálida',
+    artist: 'Allier Art Studio',
+    price: 4900,
+    description: 'Una pieza abstracta de composición geométrica y elegante. Ideal para acompañar proyectos modernos y limpios que buscan aportar fuerza y personalidad al espacio. Con una paleta de colores vibrantes —donde el naranja asume el protagonismo absoluto—, esta obra se convierte en un acento visual rotundo para el diseño de interiores y la decoración contemporánea.',
+    dimensions: '120 x 90 cm',
+    medium: 'Acrílico sobre tela',
+    year: '2026',
+    category: 'Abstracto',
+    isSigned: false,
+    authenticity: 'Incluye certificado de autenticidad',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1792931683/Marea_ca%CC%81lida_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931683/Marea_ca%CC%81lida_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931683/Marea_ca%CC%81lida_image_2.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931683/Marea_ca%CC%81lida_image_3.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792931683/Marea_ca%CC%81lida_image_4.png'
     ]
   },
   {

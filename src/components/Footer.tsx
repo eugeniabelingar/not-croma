@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SHOW_PROJECTS } from '../constants';
 
 const Footer = () => {
   return (
@@ -21,7 +22,9 @@ const Footer = () => {
           <ul className="space-y-4">
             <li><Link to="/" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Inicio</Link></li>
             <li><Link to="/coleccion" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Colección</Link></li>
-            <li><Link to="/proyectos" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Proyectos</Link></li>
+            {SHOW_PROJECTS && (
+              <li><Link to="/proyectos" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Proyectos</Link></li>
+            )}
             <li><Link to="/sobre-nosotros" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Nosotros</Link></li>
             <li><Link to="/sumate" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Contactanos</Link></li>
             <li><Link to="/faq" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Preguntas Frecuentes</Link></li>

@@ -12,6 +12,9 @@ export interface Painting {
   authenticity?: string;
   imageUrl: string;
   images?: string[];
+  isSold?: boolean;
+  privateCollectionNote?: string;
+  customCtaText?: string;
 }
 
 export interface Artist {

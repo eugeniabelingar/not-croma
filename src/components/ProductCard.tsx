@@ -42,7 +42,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ painting, hoverScale = false 
             <p className="text-[10px] uppercase tracking-[0.2em] text-luxury-ink/50 font-medium">
               {painting.artist}
             </p>
-            {painting.isSigned && (
+            {painting.isSold ? (
+              <span className="text-[8px] uppercase tracking-[0.15em] font-medium text-luxury-ink/80 px-2 py-0.5 bg-luxury-ink/5 rounded-full border border-luxury-ink/15">
+                Obra vendida
+              </span>
+            ) : painting.isSigned && (
               <span className="text-[8px] uppercase tracking-[0.15em] font-semibold text-luxury-ink px-2 py-0.5 bg-luxury-ink/5 rounded-full border border-luxury-ink/10">
                 Obra firmada
               </span>

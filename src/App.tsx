@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { CartProvider } from './context/CartContext';
 import Navbar from './components/Navbar';
@@ -12,6 +12,7 @@ import JoinUs from './pages/JoinUs';
 import AboutUs from './pages/AboutUs';
 import Projects from './pages/Projects';
 import { AnimatePresence } from 'motion/react';
+import { SHOW_PROJECTS } from './constants';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -34,7 +35,7 @@ export default function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/coleccion" element={<Catalog />} />
-                <Route path="/proyectos" element={<Projects />} />
+                <Route path="/proyectos" element={SHOW_PROJECTS ? <Projects /> : <Navigate to="/" replace />} />
                 <Route path="/producto/:id" element={<ProductDetail />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/carrito" element={<Cart />} />

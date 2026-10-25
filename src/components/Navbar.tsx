@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import StaggeredMenu from './StaggeredMenu';
+import { SHOW_PROJECTS } from '../constants';
 
 const Navbar = () => {
   const { pathname } = useLocation();
@@ -20,7 +21,7 @@ const Navbar = () => {
   const navLinks = [
     { label: 'Inicio', link: '/' },
     { label: 'Colección', link: '/coleccion' },
-    { label: 'Proyectos', link: '/proyectos' },
+    ...(SHOW_PROJECTS ? [{ label: 'Proyectos', link: '/proyectos' }] : []),
     { label: 'Nosotros', link: '/sobre-nosotros' },
     { label: 'CONTACTANOS', link: '/sumate' },
     { label: 'FAQ', link: '/faq' },

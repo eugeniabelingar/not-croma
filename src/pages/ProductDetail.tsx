@@ -96,6 +96,11 @@ const ProductDetail = () => {
             <p className="text-[10px] uppercase tracking-[0.4em] text-luxury-ink/50 font-medium">
               {painting.artist}
             </p>
+            {painting.isSold && (
+              <span className="text-[9px] uppercase tracking-widest font-bold px-2.5 py-0.5 bg-neutral-900 text-luxury-bg rounded-full">
+                Obra Vendida
+              </span>
+            )}
             {painting.isSigned && (
               <span className="text-[9px] uppercase tracking-widest font-semibold px-2.5 py-0.5 bg-luxury-ink text-luxury-bg rounded-full">
                 Obra firmada
@@ -106,10 +111,29 @@ const ProductDetail = () => {
 
           <div className="space-y-8 mb-10">
             <div>
-              <h4 className="text-[10px] uppercase tracking-widest font-bold mb-3">Descripción</h4>
+              <div className="flex items-center justify-between gap-3 mb-3 flex-wrap">
+                <h4 className="text-[10px] uppercase tracking-widest font-bold">Descripción</h4>
+                {painting.isSold && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-luxury-ink text-luxury-bg text-[9px] tracking-[0.22em] font-bold uppercase rounded-full shadow-xs">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                    OBRA VENDIDA
+                  </span>
+                )}
+              </div>
               <p className="text-sm font-light leading-relaxed text-luxury-ink/80">
                 {painting.description}
               </p>
+
+              {painting.privateCollectionNote && (
+                <div className="mt-5 p-4 md:p-5 rounded-xl bg-[#FAF9F7] border border-luxury-ink/10 border-l-4 border-l-luxury-ink">
+                  <p className="text-xs font-light leading-relaxed text-luxury-ink/90">
+                    <span className="font-semibold text-luxury-ink tracking-wide">Colección privada:</span>{' '}
+                    {painting.privateCollectionNote.startsWith('Colección privada:')
+                      ? painting.privateCollectionNote.replace(/^Colección privada:\s*/, '')
+                      : painting.privateCollectionNote}
+                  </p>
+                </div>
+              )}
             </div>
 
             <div className="grid grid-cols-2 gap-8 border-t border-luxury-ink/10 pt-8">
@@ -137,11 +161,19 @@ const ProductDetail = () => {
           </div>
 
           <a
-            href={`mailto:allierartstudio@gmail.com?subject=Consulta sobre ${encodeURIComponent(painting.title)}`}
+            href={`mailto:allierartstudio@gmail.com?subject=${encodeURIComponent(
+              painting.id === '1' || painting.title.toLowerCase().includes('costa azul')
+                ? `Consulta por obras similares a ${painting.title}`
+                : `Consulta sobre ${painting.title}`
+            )}`}
             className="w-full py-5 text-xs uppercase tracking-[0.2em] transition-all duration-300 flex items-center justify-center space-x-3 rounded-full bg-luxury-ink text-luxury-bg hover:bg-luxury-ink/90 text-center cursor-pointer shadow-sm"
           >
             <Mail size={16} />
-            <span>Consultar sobre esta obra</span>
+            <span>
+              {painting.id === '1' || painting.title.toLowerCase().includes('costa azul')
+                ? (painting.customCtaText || 'CONSULTAR POR OBRAS SIMILARES')
+                : 'Consultar sobre esta obra'}
+            </span>
           </a>
         </motion.div>
       </div>

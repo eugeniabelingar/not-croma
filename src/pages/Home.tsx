@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PAINTINGS } from '../constants';
+import { PAINTINGS, SHOW_PROJECTS } from '../constants';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import FeaturedCarousel from '../components/FeaturedCarousel';
@@ -85,7 +85,7 @@ const Home = () => {
       {/* Trust Bar / Beneficios */}
       <section className="border-t border-b border-luxury-ink/10 bg-[#FAF9F7] py-14 md:py-20">
         <div className="w-full px-8 sm:px-12 md:px-16 lg:px-20 xl:px-24">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 lg:gap-0 lg:divide-x divide-luxury-ink/10">
+          <div className={`grid grid-cols-1 ${SHOW_PROJECTS ? 'sm:grid-cols-2 lg:grid-cols-4 sm:gap-12' : 'sm:grid-cols-3 sm:gap-8'} gap-10 lg:gap-0 lg:divide-x divide-luxury-ink/10`}>
             <div className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5">
               <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink">
                 OBRAS ORIGINALES
@@ -113,19 +113,21 @@ const Home = () => {
               </p>
             </div>
 
-            <Link to="/proyectos" className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5 group">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink group-hover:text-luxury-ink/70 transition-colors">
-                  PROYECTOS
-                </h3>
-                <span className="text-[10px] uppercase tracking-wider text-luxury-ink/40 group-hover:text-luxury-ink transition-colors font-medium">
-                  Ver →
-                </span>
-              </div>
-              <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
-                Trabajamos en conjunto con estudios de arquitectura y otros profesionales.
-              </p>
-            </Link>
+            {SHOW_PROJECTS && (
+              <Link to="/proyectos" className="flex flex-col text-left lg:px-8 xl:px-12 space-y-2.5 group">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-xs sm:text-[13px] font-bold uppercase tracking-[0.25em] text-luxury-ink group-hover:text-luxury-ink/70 transition-colors">
+                    PROYECTOS
+                  </h3>
+                  <span className="text-[10px] uppercase tracking-wider text-luxury-ink/40 group-hover:text-luxury-ink transition-colors font-medium">
+                    Ver →
+                  </span>
+                </div>
+                <p className="text-sm font-light text-luxury-ink/70 leading-relaxed">
+                  Trabajamos en conjunto con estudios de arquitectura y otros profesionales.
+                </p>
+              </Link>
+            )}
           </div>
         </div>
       </section>
