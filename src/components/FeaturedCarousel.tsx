@@ -112,9 +112,16 @@ const FeaturedCarousel: React.FC<FeaturedCarouselProps> = ({ paintings }) => {
                       isHovered ? 'opacity-100' : 'opacity-0'
                     }`}
                   >
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-gray-300 font-medium mb-2">
-                      {painting.artist}
-                    </p>
+                    <div className="flex items-center justify-between gap-2 mb-2">
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-gray-300 font-medium">
+                        {painting.artist}
+                      </p>
+                      {painting.isSold && (
+                        <span className="text-[8px] uppercase tracking-[0.15em] font-medium text-white/90 px-2 py-0.5 bg-white/20 backdrop-blur-sm rounded-full border border-white/25">
+                          Obra vendida
+                        </span>
+                      )}
+                    </div>
                     <h3 className="text-3xl font-highlight text-white leading-tight">
                       {painting.title}
                     </h3>

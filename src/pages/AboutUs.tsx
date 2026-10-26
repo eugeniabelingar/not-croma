@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Sparkles, Building2, Handshake, X, Check } from 'lucide-react';
-import nosotrosImage from '../nosotros_2.jpg';
+import { PAINTINGS } from '../constants';
+
+const saviaPainting = PAINTINGS.find((p) => p.title.toLowerCase() === 'savia');
+const saviaCoverImage = saviaPainting?.imageUrl || 'https://res.cloudinary.com/uswfskxs/image/upload/v1792931894/Savia_image_1.png';
 
 const AboutUs = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -70,9 +73,9 @@ const AboutUs = () => {
             className="absolute inset-0"
           >
             <img
-              src={nosotrosImage}
-              alt="Art Studio"
-              className="w-full h-full object-cover"
+              src={saviaCoverImage}
+              alt="SAVIA - Allier Art Studio"
+              className="w-full h-full object-cover object-center"
               referrerPolicy="no-referrer"
             />
             {/* Floating Circle Accent Removed */}

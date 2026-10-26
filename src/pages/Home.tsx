@@ -9,55 +9,28 @@ import heroImage from '../hero_1.jpg';
 
 const Home = () => {
   // Curaduría para el carrusel de Home:
-  // 1. Excluir el cuadro "Ella amarillo"
-  // 2. Savia en primer lugar (posición 1, índice 0)
-  // 3. Costa Azul en segundo lugar (posición 2, índice 1)
-  // 4. Marea Cálida en tercer lugar (posición 3, índice 2)
-  // 5. Oro Rosa en el lugar que ocupaba Savia
+  // 1. SAVIA
+  // 2. Marea Cálida
+  // 3. Florescencia tardía
+  // 4. Costa del Bosque
+  // 5. Oro Rosa
+  // 6. Granate Latente
   const carouselPaintings = useMemo(() => {
-    const withoutAmarillo = PAINTINGS.filter(
-      (p) => !p.title.toLowerCase().includes('amarillo')
-    );
-
     const normalize = (str: string) =>
       str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
 
-    const savia = withoutAmarillo.find((p) => normalize(p.title) === 'savia');
-    const costaAzul = withoutAmarillo.find((p) => normalize(p.title) === 'costa azul');
-    const mareaCalida = withoutAmarillo.find((p) => normalize(p.title) === 'marea calida');
-    const oroRosa = withoutAmarillo.find((p) => normalize(p.title) === 'oro rosa');
-
-    const specialIds = new Set(
-      [savia?.id, costaAzul?.id, mareaCalida?.id, oroRosa?.id].filter(Boolean)
-    );
-
-    const topThree: typeof PAINTINGS = [];
-    if (savia) topThree.push(savia);
-    if (costaAzul) topThree.push(costaAzul);
-    if (mareaCalida) topThree.push(mareaCalida);
-
-    // Obras intermedias anteriores al lugar original de Savia (Florescencia tardía, Cauce Azul)
-    const midPaintings = withoutAmarillo.filter(
-      (p) =>
-        !specialIds.has(p.id) &&
-        (normalize(p.title) === 'florescencia tardia' ||
-          normalize(p.title) === 'cauce azul')
-    );
-
-    // Obras posteriores al lugar original de Savia (Ella Azul, Costa del bosque, etc.)
-    const postPaintings = withoutAmarillo.filter(
-      (p) =>
-        !specialIds.has(p.id) &&
-        normalize(p.title) !== 'florescencia tardia' &&
-        normalize(p.title) !== 'cauce azul'
-    );
-
-    return [
-      ...topThree,
-      ...midPaintings,
-      ...(oroRosa ? [oroRosa] : []),
-      ...postPaintings
+    const order = [
+      'savia',
+      'marea calida',
+      'florescencia tardia',
+      'costa del bosque',
+      'oro rosa',
+      'granate latente',
     ];
+
+    return order
+      .map((target) => PAINTINGS.find((p) => normalize(p.title) === target))
+      .filter((p): p is (typeof PAINTINGS)[number] => Boolean(p));
   }, []);
   return (
     <div>

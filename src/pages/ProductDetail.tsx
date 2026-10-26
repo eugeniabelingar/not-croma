@@ -166,7 +166,7 @@ const ProductDetail = () => {
 
           <a
             href={`mailto:allierartstudio@gmail.com?subject=${encodeURIComponent(
-              painting.id === '1' || painting.title.toLowerCase().includes('costa azul')
+              painting.customCtaText || painting.isSold
                 ? `Consulta por obras similares a ${painting.title}`
                 : `Consulta sobre ${painting.title}`
             )}`}
@@ -174,9 +174,7 @@ const ProductDetail = () => {
           >
             <Mail size={16} />
             <span>
-              {painting.id === '1' || painting.title.toLowerCase().includes('costa azul')
-                ? (painting.customCtaText || 'CONSULTAR POR OBRAS SIMILARES')
-                : 'Consultar sobre esta obra'}
+              {painting.customCtaText || (painting.isSold ? 'CONSULTAR POR OBRAS SIMILARES' : 'Consultar sobre esta obra')}
             </span>
           </a>
         </motion.div>

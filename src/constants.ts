@@ -161,6 +161,46 @@ export const PAINTINGS: Painting[] = [
       'https://res.cloudinary.com/uswfskxs/image/upload/v1793047960/Costa_del_bosque_image_2.png',
       'https://res.cloudinary.com/uswfskxs/image/upload/v1793047959/Costa_del_bosque_image_3.png'
     ]
+  },
+  {
+    id: '10',
+    title: 'Brocato',
+    artist: 'Cris Alzualde',
+    price: 6800,
+    description: 'Retrato figurativo contemporáneo. Obra de autor de la artista Cris Alzualde realizada en acrílico y grafito sobre tela con trazos expresivos y profunda sensibilidad visual. Se entrega con certificado de autenticidad emitido y firmado por la artista.',
+    dimensions: '150 x 100 cm',
+    medium: 'Acrílico y grafito sobre tela',
+    year: '2025',
+    category: 'Artistas',
+    isSigned: true,
+    authenticity: 'Certificado de autenticidad de artista Cris Alzualde',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1793054412/Brocato_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793054412/Brocato_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793054414/Brocato_image_2.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793054415/Brocato_image_3.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793054417/Brocato_image_4.png'
+    ]
+  },
+  {
+    id: '11',
+    title: 'Granate Latente',
+    artist: 'Allier Art Studio',
+    price: 5200,
+    description: 'Una obra abstracta donde la intensidad del tono granate y sus texturas orgánicas dialogan con la arquitectura del espacio. Diseñada para generar una atmósfera envolvente, sofisticada y con carácter propio en proyectos contemporáneos de interiorismo.',
+    dimensions: '80 x 100 cm',
+    medium: 'Acrílico sobre tela',
+    year: '2025',
+    category: 'Abstracto',
+    isSigned: false,
+    authenticity: 'Incluye certificado de autenticidad',
+    isSold: true,
+    customCtaText: 'CONSULTAR POR OBRAS SIMILARES',
+    privateCollectionNote: 'Colección privada: Obra adquirida de forma exclusiva para un proyecto de arquitectura e interiorismo en el barrio Costa Esmeralda (Buenos Aires, 2025).',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1793056964/Granate_latente_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793056964/Granate_latente_image_1.png'
+    ]
   }
 ];
 
