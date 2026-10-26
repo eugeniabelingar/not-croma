@@ -8,6 +8,7 @@ export interface Painting {
   medium: string;
   year: string;
   category: string;
+  categories?: string[];
   isSigned?: boolean;
   authenticity?: string;
   imageUrl: string;

@@ -1,12 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Tenor+Sans&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-serif: "Tenor Sans", "Cinzel", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Tenor Sans", sans-serif;
   --font-sans: "Archivo", sans-serif;
   --color-luxury-bg: #fdfcfb;
   --color-luxury-ink: #1a1a1a;
   --color-luxury-accent: #c5a059;
+  --color-foreground: #1a1a1a;
+  --color-background: #fdfcfb;
+  --color-muted: #f4f2ee;
+  --color-muted-foreground: #737373;
+  --color-border: #e5e5e5;
+  --color-ring: #1a1a1a;
 }
 
 @layer base {
@@ -15,11 +22,23 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-black uppercase tracking-tighter;
+    @apply font-sans uppercase;
+  }
+
+  .font-serif,
+  h1.font-serif,
+  h2.font-serif,
+  h3.font-serif,
+  h4.font-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0.08em;
   }
 
   .font-highlight {
-    @apply font-serif font-medium tracking-wide;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: 0.06em;
   }
 
   /* Global focus styles */

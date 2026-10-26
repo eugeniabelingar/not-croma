@@ -107,7 +107,7 @@ const ProductDetail = () => {
               </span>
             )}
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif mb-8 font-normal">{painting.title}</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif mb-8 font-normal tracking-[0.06em]">{painting.title}</h1>
 
           <div className="space-y-8 mb-10">
             <div>
@@ -125,7 +125,7 @@ const ProductDetail = () => {
               </p>
 
               {painting.privateCollectionNote && (
-                <div className="mt-5 p-4 md:p-5 rounded-xl bg-[#FAF9F7] border border-luxury-ink/10 border-l-4 border-l-luxury-ink">
+                <div className="mt-5 p-4 md:p-5 rounded-xl bg-[#FAF9F7] border border-luxury-ink/15">
                   <p className="text-xs font-light leading-relaxed text-luxury-ink/90">
                     <span className="font-semibold text-luxury-ink tracking-wide">Colección privada:</span>{' '}
                     {painting.privateCollectionNote.startsWith('Colección privada:')
@@ -134,6 +134,10 @@ const ProductDetail = () => {
                   </p>
                 </div>
               )}
+
+              <p className="mt-4 text-[11px] font-light italic text-luxury-ink/50 leading-relaxed">
+                * Los colores de la fotografía pueden diferir de manera ligera a los colores reales de la obra.
+              </p>
             </div>
 
             <div className="grid grid-cols-2 gap-8 border-t border-luxury-ink/10 pt-8">
@@ -151,7 +155,7 @@ const ProductDetail = () => {
               </div>
               <div>
                 <h4 className="text-[10px] uppercase tracking-widest font-bold mb-2">Categoría</h4>
-                <p className="text-sm font-light">{painting.category}</p>
+                <p className="text-sm font-light">{painting.categories && painting.categories.length > 0 ? painting.categories.join(' / ') : painting.category}</p>
               </div>
               <div>
                 <h4 className="text-[10px] uppercase tracking-widest font-bold mb-2">Autenticidad</h4>

@@ -56,6 +56,9 @@ const Catalog = () => {
       }
       return true;
     }
+    if (p.categories && p.categories.includes(activeCategory)) {
+      return true;
+    }
     return p.category === activeCategory;
   });
 
@@ -66,7 +69,7 @@ const Catalog = () => {
   return (
     <div className="pt-32 pb-32 px-6 max-w-7xl mx-auto">
       <header className="mb-16">
-        <h1 className="text-5xl font-serif mb-8">Colección Completa</h1>
+        <h1 className="text-4xl md:text-5xl font-serif font-normal tracking-[0.12em] uppercase mb-8">Colección Completa</h1>
         
         {/* Category Filter */}
         <div className="flex flex-wrap gap-8 border-b border-luxury-ink/10 pb-6">
@@ -165,7 +168,7 @@ const Catalog = () => {
                       OBRA FIRMADA
                     </span>
                   </div>
-                  <h2 className="text-3xl font-serif text-luxury-ink uppercase">
+                  <h2 className="text-2xl md:text-3xl font-serif font-normal tracking-[0.08em] text-luxury-ink uppercase">
                     {currentArtist?.name || selectedArtist}
                   </h2>
                   {currentArtist?.bio && (

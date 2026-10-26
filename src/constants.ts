@@ -1,6 +1,5 @@
 import { Painting, Artist } from './types';
 import crisAlzualdeImg from './cris_alzualde_1.png';
-import crisAlzualdeObraImg from './cris_alzualde_obra_1.png';
 
 // Control de visibilidad de la sección Proyectos (cambiar a true para volver a mostrarla en el sitio)
 export const SHOW_PROJECTS = false;
@@ -95,6 +94,7 @@ export const PAINTINGS: Painting[] = [
     medium: 'Acrílico sobre tela',
     year: '2026',
     category: 'Abstracto',
+    categories: ['Abstracto', 'Florales'],
     isSigned: false,
     authenticity: 'Incluye certificado de autenticidad',
     imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1792931894/Savia_image_1.png',
@@ -125,19 +125,42 @@ export const PAINTINGS: Painting[] = [
     ]
   },
   {
-    id: '4',
-    title: 'Ella Amarillo',
+    id: '8',
+    title: 'Ella Azul',
     artist: 'Cris Alzualde',
-    price: 6200,
-    description: 'Obra de autor de la artista contemporánea Cris Alzualde. Una pieza con carácter expresivo y cuidada textura, firmada de puño y letra por la artista en el frente y al dorso, entregada con certificado oficial de autenticidad.',
-    dimensions: '80 x 100 cm',
-    medium: 'Técnica mixta sobre lienzo',
-    year: '2026',
+    price: 6400,
+    description: 'Retrato figurativo contemporáneo. Obra de autor de la artista Cris Alzualde realizada en acrílico y grafito sobre tela con trazos expresivos y profunda sensibilidad visual. Se entrega con certificado de autenticidad emitido y firmado por la artista.',
+    dimensions: '110 x 80 cm',
+    medium: 'Acrílico y grafito sobre tela',
+    year: '2019',
     category: 'Artistas',
     isSigned: true,
-    authenticity: 'Obra firmada por Cris Alzualde + Certificado de autenticidad',
-    imageUrl: crisAlzualdeObraImg,
-    images: [crisAlzualdeObraImg, crisAlzualdeImg]
+    authenticity: 'Certificado de autenticidad de artista Cris Alzualde',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1792932987/Ella_Azul_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792932987/Ella_Azul_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1792932988/Ella_Azul_image_3.png'
+    ]
+  },
+  {
+    id: '9',
+    title: 'Costa del bosque',
+    artist: 'Allier Art Studio',
+    price: 5200,
+    description: 'Una obra de impronta orgánica y contemplativa que evoca los ritmos silenciosos de la naturaleza costera y boscosa. Sus texturas sutiles y delicadas transiciones tonales invitan al reposo visual, convirtiéndose en una pieza protagónica y serena para proyectos contemporáneos de arquitectura e interiorismo.',
+    dimensions: '1000 x 1000',
+    medium: 'Acrílico sobre tela',
+    year: '2026',
+    category: 'Abstracto',
+    categories: ['Abstracto', 'Florales'],
+    isSigned: false,
+    authenticity: 'Incluye certificado de autenticidad',
+    imageUrl: 'https://res.cloudinary.com/uswfskxs/image/upload/v1793047956/Costa_del_bosque_image_1.png',
+    images: [
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793047956/Costa_del_bosque_image_1.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793047960/Costa_del_bosque_image_2.png',
+      'https://res.cloudinary.com/uswfskxs/image/upload/v1793047959/Costa_del_bosque_image_3.png'
+    ]
   }
 ];
 
