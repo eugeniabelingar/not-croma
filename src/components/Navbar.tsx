@@ -22,7 +22,7 @@ const Navbar = () => {
     { label: 'Inicio', link: '/' },
     { label: 'Colección', link: '/coleccion' },
     ...(SHOW_PROJECTS ? [{ label: 'Proyectos', link: '/proyectos' }] : []),
-    { label: 'Nosotros', link: '/sobre-nosotros' },
+    { label: 'Nosotras', link: '/sobre-nosotros' },
     { label: 'CONTACTANOS', link: '/sumate' },
     { label: 'FAQ', link: '/faq' },
   ];

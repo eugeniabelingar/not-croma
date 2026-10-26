@@ -25,7 +25,7 @@ const Footer = () => {
             {SHOW_PROJECTS && (
               <li><Link to="/proyectos" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Proyectos</Link></li>
             )}
-            <li><Link to="/sobre-nosotros" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Nosotros</Link></li>
+            <li><Link to="/sobre-nosotros" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Nosotras</Link></li>
             <li><Link to="/sumate" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Contactanos</Link></li>
             <li><Link to="/faq" className="text-xs uppercase tracking-widest hover:text-luxury-accent transition-colors">Preguntas Frecuentes</Link></li>
           </ul>

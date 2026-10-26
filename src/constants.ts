@@ -218,10 +218,12 @@ export const FAQS = [
     question: '¿Cómo realizo la adquisición de una obra?',
     answer: 'Es simple. Elegís la pieza que conecte con vos y hacés clic en "Consultar sobre esta obra" o nos escribís directamente por correo o WhatsApp. Nos pondremos en contacto personalizado para brindarte asesoramiento, cotización y coordinar la entrega.'
   },
+  /*
   {
     question: '¿Realizan envíos?',
     answer: 'Sí, llegamos a cualquier rincón de Argentina. Nos encargamos de que el embalaje sea el ideal para que la obra viaje segura y llegue impecable a tu puerta. Coordinamos el envío y los tiempos de entrega directamente con vos.'
   },
+  */
   {
     question: '¿Cómo sé que mi obra es original?',
     answer: 'Cada pieza en Allier Art Studio es única. Por eso, todas nuestras obras se entregan con un certificado de autenticidad firmado, que garantiza su origen y el valor de la autoría. Comprás arte real, con el respaldo real del artista.'
