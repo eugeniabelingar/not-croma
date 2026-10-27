@@ -148,7 +148,7 @@ export const PAINTINGS: Painting[] = [
     artist: 'Allier Art Studio',
     price: 5200,
     description: 'Una obra de impronta orgánica y contemplativa que evoca los ritmos silenciosos de la naturaleza costera y boscosa. Sus texturas sutiles y delicadas transiciones tonales invitan al reposo visual, convirtiéndose en una pieza protagónica y serena para proyectos contemporáneos de arquitectura e interiorismo.',
-    dimensions: '1000 x 1000',
+    dimensions: '100 x 100 cm',
     medium: 'Acrílico sobre tela',
     year: '2026',
     category: 'Abstracto',

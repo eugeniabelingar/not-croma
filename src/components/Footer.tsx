@@ -40,7 +40,16 @@ const Footer = () => {
                 allierartstudio@gmail.com
               </a>
             </li>
-            <li className="text-xs uppercase tracking-widest text-luxury-bg/60">1127790627</li>
+            <li className="text-xs uppercase tracking-widest text-luxury-bg/60">
+              <a href="https://wa.me/5491127790627" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-bg transition-colors">
+                11 2779-0627 (Euge)
+              </a>
+            </li>
+            <li className="text-xs uppercase tracking-widest text-luxury-bg/60">
+              <a href="https://wa.me/5491161923712" target="_blank" rel="noopener noreferrer" className="hover:text-luxury-bg transition-colors">
+                11 6192-3712 (Cris)
+              </a>
+            </li>
           </ul>
         </div>
       </div>
